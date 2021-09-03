@@ -1,0 +1,23 @@
+{%load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+<p>
+    <a href="{% url 'myapp:edit_form' sanu.id%}">Edit Form</a><br>
+
+
+    <a href="{% url 'myapp:home' %}">Home page</a>
+</p>
+
+
+
+
+<h1>our detail pages </h1>
+<p>
+<h2>{{sanu.name}}</h2><br>
+{{ sanu.id }}<br>
+{{ sanu.value }}<br>
+{{ sanu.material }}<br>
+{{ sanu.address }}
+        {% if sanu.pics %}
+    <img src="{{ sanu.pics.url}}" class="img-responsive">
+        {% endif %}
+    </p>
